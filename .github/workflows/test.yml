@@ -17,4 +17,4 @@ jobs:
       - name: Run Angular Tests
         run: |
           cd angular-app/
-          npm test
+          npm test -- --watch=false --browsers=ChromeHeadless
