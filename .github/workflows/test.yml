@@ -11,8 +11,8 @@ jobs:
         with:
           node-version: 18
       - name: Install JS deps
-        run: npm i
-      - name: Run Angular Tests
         run: |
           cd angular-app/
-          ng test
+          npm i
+      - name: Run Angular Tests
+        run: ng test
