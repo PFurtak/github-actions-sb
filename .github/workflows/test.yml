@@ -9,10 +9,10 @@ jobs:
       - name: Update NodeJS to 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - name: Install JS deps
         run: |
           cd angular-app/
           npm i
       - name: Run Angular Tests
-        run: ng test
+        run: npm test
