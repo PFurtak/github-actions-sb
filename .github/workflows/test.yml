@@ -16,5 +16,5 @@ jobs:
           npm i
       - name: Run Angular Tests
         run: |
-          cd angular-app/ 
+          cd angular-app/
           npm test
