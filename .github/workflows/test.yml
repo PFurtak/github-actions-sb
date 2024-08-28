@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout Src
         uses: actions/checkout@v3
-      - name: Update NodeJS to 18
+      - name: Update NodeJS to 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -15,4 +15,6 @@ jobs:
           cd angular-app/
           npm i
       - name: Run Angular Tests
-        run: npm test
+        run: |
+          cd angular-app/ 
+          npm test
