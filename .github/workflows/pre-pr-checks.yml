@@ -1,7 +1,7 @@
-name: Test Project
+name: Pre PR Checks
 on: push
 jobs:
-  test:
+  pr-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Src
@@ -14,7 +14,11 @@ jobs:
         run: |
           cd angular-app/
           npm i
-      - name: Run Angular Tests
+      - name: ESlint Check
+        run: |
+          cd angular-app/
+          npm run lint
+      - name: Angular Tests
         run: |
           cd angular-app/
           npm test -- --watch=false --browsers=ChromeHeadless
