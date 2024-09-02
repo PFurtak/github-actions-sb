@@ -1,0 +1,10 @@
+name: Issue Logging
+on:
+  issues:
+    types: [opened, closed, reopened]
+jobs:
+  logging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub Context
+        run: echo "${{ toJSON(github) }}"
