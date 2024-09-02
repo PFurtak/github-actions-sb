@@ -5,11 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Src
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+        uses: actions/setup-node@v4
       - name: Install NPM Deps
         run: |
           cd angular-app/
